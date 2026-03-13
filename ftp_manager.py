@@ -23,7 +23,7 @@ from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QTreeView, QListView, QSplitter,
     QFrame, QProgressBar, QStatusBar, QMenuBar, QMenu, QToolBar,
-    QAbstractItemView, QHeaderView, QDialog,
+    QAbstractItemView, QHeaderView, QDialog, QTableView,
     QDialogButtonBox, QFormLayout, QComboBox, QCheckBox, QScrollArea,
     QTabWidget, QTextEdit, QSizePolicy, QMessageBox, QInputDialog,
     QFileDialog, QGridLayout, QStackedWidget, QSpinBox, QListWidget,
