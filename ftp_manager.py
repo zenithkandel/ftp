@@ -23,13 +23,19 @@ from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QTreeView, QListView, QSplitter,
     QFrame, QProgressBar, QStatusBar, QMenuBar, QMenu, QToolBar,
-    QFileSystemModel, QAbstractItemView, QHeaderView, QDialog,
+    QAbstractItemView, QHeaderView, QDialog,
     QDialogButtonBox, QFormLayout, QComboBox, QCheckBox, QScrollArea,
     QTabWidget, QTextEdit, QSizePolicy, QMessageBox, QInputDialog,
     QFileDialog, QGridLayout, QStackedWidget, QSpinBox, QListWidget,
     QListWidgetItem, QTreeWidget, QTreeWidgetItem, QTableWidget,
     QTableWidgetItem, QGroupBox
 )
+
+# QFileSystemModel moved to QtGui in PyQt6 6.4+, with fallback for older versions
+try:
+    from PyQt6.QtGui import QFileSystemModel
+except ImportError:
+    from PyQt6.QtWidgets import QFileSystemModel
 from PyQt6.QtCore import (
     Qt, QThread, pyqtSignal, QTimer, QSize, QModelIndex, QMimeData,
     QFileInfo, QDir, QSortFilterProxyModel, QAbstractTableModel,
